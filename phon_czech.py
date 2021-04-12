@@ -101,16 +101,16 @@ def ipa_czech(text):
         part = part.replace('ch', 'A').replace('dz', 'B').replace('dž', 'C')
         digraphs = {'A': 'ch', 'B': 'dz', 'C': 'dž'}
         part = list(part)
-        for l in range(len(part)):
-            if part[l] in digraphs:
-                part[l] = digraphs[part[l]]
+        for i, l in enumerate(part):
+            if l in digraphs:
+                part[i] = digraphs[l]
 
         # transcripted input
         ipa = [l for l in part]
 
         # find out intervals for neutralization and assimilation
-        posit_vowel = [-1] + [i for i in range(len(part)) if part[i] in vowels]
-        posit_sonor = [i for i in range(len(part)) if part[i] in sonors]
+        posit_vowel = [-1] + [i for i, l in enumerate(part) if l in vowels]
+        posit_sonor = [i for i, l in enumerate(part) if l in sonors]
 
         # neutralization
         j = posit_vowel[-1]
