@@ -19,17 +19,18 @@ def ipa_czech(text):
 
     voice_voice = {'dz': 'd͡z', 'dž': 'd͡ʒ', 'v': 'v', 'g': 'ɡ', 'b': 'b',
                    'z': 'z', 'ž': 'ʒ', 'd': 'd', 'ď': 'ɟ', 'h': 'ɦ',
-                   'ch': 'ɣ', 'x': 'ks', 'w': 'v', 'ř': 'r̝', 'q': 'kv'}
+                   'w': 'v', 'ř': 'r̝', 'q': 'kv'}
 
     voice_voiceless = {'dz': 't͡s', 'dž': 't͡ʃ', 'v': 'f', 'g': 'k', 'b': 'p',
                        'z': 's', 'ž': 'ʃ', 'd': 't', 'ď': 'c', 'h': 'x',
-                       'ch': 'x', 'x': 'ks', 'w': 'f', 'ř': 'r̝̊', 'q': 'kf'}
+                       'w': 'f', 'ř': 'r̝̊', 'q': 'kf'}
 
     voiceless_voiceless = {'c': 't͡s', 'č': 't͡ʃ', 'f': 'f', 'k': 'k',
-                           'p': 'p', 's': 's', 'š': 'ʃ', 't': 't', 'ť': 'c'}
+                           'p': 'p', 's': 's', 'š': 'ʃ', 't': 't', 'ť': 'c',
+                           'ch': 'x'}
 
     voiceless_voice = {'c': 'd͡z', 'č': 'd͡ʒ', 'f': 'v', 'k': 'ɡ', 'p': 'b',
-                       's': 'z', 'š': 'ʒ', 't': 'd', 'ť': 'ɟ'}
+                       's': 'z', 'š': 'ʒ', 't': 'd', 'ť': 'ɟ', 'ch': 'ɣ'}
 
     # exceptions
     vowel_prefixes = ('nade', 'obe', 'pode', 'přede', 'roze', 'se', 've',
@@ -53,6 +54,7 @@ def ipa_czech(text):
           'display': 'dysplej', 'disp': 'dysp', 'dist': 'dyst',
           'divide': 'dyvide', 'dukti': 'dukty', 'edic': 'edyc',
           'error': 'eror', 'elektroni': 'elektrony', 'energetik': 'energetyk',
+          'pexe': 'pekse', 'mex': 'meks', 'tex': 'teks', 'ex': 'egz', 'x': 'ks',
           'etik': 'etyk', 'femini': 'feminy', 'finiš': 'finyš',
           'monie': 'monye', 'geneti': 'genety', 'gieni': 'gieny',
           'imuni': 'imuny', 'indiv': 'indyv', 'inici': 'inyci',
